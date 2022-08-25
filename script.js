@@ -1,8 +1,8 @@
 // base skeleton of a calculator
 
-let firstNumber = prompt("Please enter a number:");
-let secondNumber = prompt("Please enter a second number:");
-let operateValue = prompt("Please add an operator (+, -, *, /")
+// let firstNumber = prompt("Please enter a number:");
+// let secondNumber = prompt("Please enter a second number:");
+// let operateValue = prompt("Please add an operator (+, -, *, /")
 let num1 = parseFloat(firstNumber); // parseFloat so we can work with decimals
 let num2 = parseFloat(secondNumber);
 let operator = operateValue;
