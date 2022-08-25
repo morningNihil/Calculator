@@ -39,7 +39,7 @@ function subtract (num1, num2) {
     let rounded = Math.round((subValue + Number.EPSILON) * 100) / 100;
     rounded = rounded.toFixed(1)
     CALCDISPLAY.textContent = rounded;
-    console.log('subtrac', subValue);
+    console.log('subtract', subValue);
 };
 
 function multiply (num1, num2) {
