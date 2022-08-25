@@ -39,7 +39,7 @@ html {
     margin: 5px;
 }
 
-button {
+.button {
     margin: 1px;
     border-radius: 5%;
     border: none;
