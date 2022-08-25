@@ -174,7 +174,7 @@ function Calculator() {
     }
 
 })
-
+    // currently not working 100% since I don't seem to find out why I can't input num2 as decimal
     const DECIMALBTN = document.querySelector(".decimal");
         DECIMALBTN.addEventListener('click', () => {
         let decimalButton = ".";
@@ -184,6 +184,11 @@ function Calculator() {
         num1 = num1Temp.join("");
         CALCDISPLAY.textContent = num1;
         document.getElementsByClassName("decimal").disabled = true; // disables decimal button if it was already pressed in order to stop users from doing 16.6.5, it will be enabled back again once we press an operator, right now its not working as instended
+    } else {
+        num2Temp.push(decimalButton);
+        num2 = num2Temp.join("");
+        CALCDISPLAY.textContent = num2;
+        document.getElementsByClassName("decimal").disabled = true;
     }
 })
 
