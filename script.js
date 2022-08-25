@@ -29,15 +29,15 @@ console.log("operator used", operator);
 function add (num1, num2,) {
     let addValue = (num1 + num2);
     let rounded = Math.round((addValue + Number.EPSILON) * 100) / 100;
-    rounded = rounded.toFixed(2)
+    rounded = rounded.toFixed(1)
     CALCDISPLAY.textContent = rounded;
     console.log('add', addValue);
 };
 
 function subtract (num1, num2) {
     let subValue = (num1 - num2);
-    let rounded = Math.round((subtValue + Number.EPSILON) * 100) / 100;
-    rounded = rounded.toFixed(2)
+    let rounded = Math.round((subValue + Number.EPSILON) * 100) / 100;
+    rounded = rounded.toFixed(1)
     CALCDISPLAY.textContent = rounded;
     console.log('subtrac', subValue);
 };
@@ -45,7 +45,7 @@ function subtract (num1, num2) {
 function multiply (num1, num2) {
     let mulValue = (num1 * num2);
     let rounded = Math.round((mulValue + Number.EPSILON) * 100) / 100;
-    rounded = rounded.toFixed(2)
+    rounded = rounded.toFixed(1)
     CALCDISPLAY.textContent = rounded;
     console.log('multiply', mulValue);
 };
@@ -59,7 +59,7 @@ function divide (num1, num2) {
         return alert("Error! You cannot divide by zero ):")
     }   else {
         let rounded = Math.round((divValue + Number.EPSILON) * 100) / 100;
-        rounded = rounded.toFixed(2)
+        rounded = rounded.toFixed(1)
         CALCDISPLAY.textContent = rounded;
     }
 };
@@ -88,18 +88,18 @@ function operate(operator, num1, num2) {
 
 function Calculator() {
 
-    const CALCDISPLAY = document.querySelector('#display');
-
-    function getNumber() {
+        function getNumber() {
         const OPERANDBTN = document.querySelectorAll('.operand');
             OPERANDBTN.forEach((button) => {
-            button.addEventListener('click', () => {
-            savedFirstValue = button.getAttribute('value');
+                button.addEventListener('click', () => {
+                savedFirstValue = button.getAttribute("value");
+                const CALCDISPLAY = document.querySelector('#display');
                 
                 if (operator == "") {
+                    const CALCDISPLAY = document.querySelector('#display');
                     num1Temp.push(savedFirstValue);
                     num1 = num1Temp.join("");
-                    CALCDISPLAY.textContet = num1;
+                    CALCDISPLAY.textContent = num1;
                 } else {
 
                     num2Temp.push(savedFirstValue);
@@ -116,7 +116,7 @@ function Calculator() {
         const OPERATORBTN = document.querySelectorAll('.operator');
         OPERATORBTN.forEach((button) => {
         button.addEventListener('click', () => {
-            operator = button.getAttribute('value');
+            operator = button.getAttribute("value");
             operatorTemp.push(operator);
 
             document.getElementsByClassName('decimal').disabled= false;
@@ -183,7 +183,7 @@ function Calculator() {
         num1Temp.push(decimalButton)
         num1 = num1Temp.join("");
         CALCDISPLAY.textContent = num1;
-        document.getElementsByClassName("decimal").disabled = true; // disables decimal button if it was already pressed in order to stop users from doing 16.6.5
+        document.getElementsByClassName("decimal").disabled = true; // disables decimal button if it was already pressed in order to stop users from doing 16.6.5, it will be enabled back again once we press an operator, right now its not working as instended
     }
 })
 
