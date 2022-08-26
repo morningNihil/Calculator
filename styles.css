@@ -1,6 +1,6 @@
 html {
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: black;
 }
 
@@ -16,9 +16,9 @@ html {
 }
 
 .container {
-    background-color: white;
-    border: 10px solid white;
-    border-radius: 4px;
+    background-color: rgba(169, 196, 19, 0.205);
+    border: 15px solid rgba(140, 189, 148, 0.795);
+    border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(100px, auto) repeat(5, 80px);
@@ -32,20 +32,20 @@ html {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
-    padding: 5px;
-    font-size: 5.5em;
+    padding: 15px;
+    font-size: 6.5em;
     font-weight: initial;
-    text-shadow: 1.3px 1.3px grey;
-    margin: 5px;
+    text-shadow: 1.3px 1.3px rgba(32, 30, 30, 0.589);
+    margin: 2px;
 }
 
-.button {
+button {
     margin: 1px;
-    border-radius: 5%;
+    border-radius: 1%;
     border: none;
     font-weight: initial;
     font-size: 2em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
 
 }
@@ -56,44 +56,45 @@ html {
 
 .sign {
     grid-column: span 2;
+    
 }
 
 .operator {
     background-color: white;
+    color: brown;
+
 
 }
 
 .operator:focus {
-    background-color: blueviolet;
+    background-color: rgb(210, 206, 214);
 }
 
 .equals {
+    background-color: rgba(216, 163, 163, 0.815);
+    color: white;
 
 }
 
 .equals:active {
-
-}
-
-.decimal {
+    background-color: black;
 
 }
 
 .decimal:active {
-
-}
-.clear {
+    background-color: black;
+    color: white;
 
 }
 
 .clear:active {
-
-}
-
-.sign {
+    background-color: black;
+    color: white;
 
 }
 
 .sign:active {
+    background-color: black;
+    color: white;
 
 }
