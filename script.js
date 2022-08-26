@@ -21,8 +21,7 @@ console.log("operator used", operator);
 // subtract(num1,num2);
 // multiply(num1,num2);
 // divide(num1,num2);
-// since we are calling functions on operate() we no longer need them here
-// we will need to call operate on a different addEventListener likely or check where we can use it
+
 
 
 
@@ -84,7 +83,7 @@ function operate(operator, num1, num2) {
     }       
 };
 
-// we need to call functions in order to work on a script
+
 
 function Calculator() {
 
@@ -93,10 +92,9 @@ function Calculator() {
             OPERANDBTN.forEach((button) => {
                 button.addEventListener('click', () => {
                 savedFirstValue = button.getAttribute("value");
-                const CALCDISPLAY = document.querySelector('#display');
+                
                 
                 if (operator == "") {
-                    const CALCDISPLAY = document.querySelector('#display');
                     num1Temp.push(savedFirstValue);
                     num1 = num1Temp.join("");
                     CALCDISPLAY.textContent = num1;
@@ -174,7 +172,7 @@ function Calculator() {
     }
 
 })
-    // currently not working 100% since I don't seem to find out why I can't input num2 as decimal
+    
     const DECIMALBTN = document.querySelector(".decimal");
         DECIMALBTN.addEventListener('click', () => {
         let decimalButton = ".";
